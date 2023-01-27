@@ -1,0 +1,2411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Bootstrap Icon library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" integrity="sha384-He3RckdFB2wffiHOcESa3sf4Ida+ni/fw9SSzAcfY2EPnU1zkK/sLUzw2C5Tyuhj" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Webpage Design Test</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="charts.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/charts.css/dist/charts.min.css">
+
+
+  </head>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    *{
+        font-family: 'Poppins', sans-serif;
+        color: #444444;
+        
+        
+    }
+    img{
+        visibility: hidden;
+    }
+    .header{
+        visibility: hidden;
+    }
+    .top-banner{
+        visibility: hidden;
+    }
+    .stats-banner{
+        visibility: hidden;
+    }
+    .third-banner-section{
+        visibility: hidden;
+    }
+    .fourth-banner-section{
+        visibility: hidden;
+    }
+    .fifth-banner-section{
+        visibility: hidden;
+    }
+    .sixth-banner-section{
+        visibility: hidden;
+    }
+  
+    body{
+       display: column;
+       justify-content: center;
+       align-items: center;
+    }
+    a{
+        text-decoration: none;
+    }
+    .header-list li{
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .banner-image{
+        clip-path: polygon(0 37%, 100% 0, 100% 100%, 0 100%);
+        
+    }
+    .banner-text-section h1{
+        font-weight: 700;
+        font-size: 78px;
+        line-height: 72px;
+        
+    }
+    .banner-text-section span h1{
+        color: white;
+        text-shadow: -1px 1px 0 #ed7d4f,
+                    1px 1px 0 #ed7d4f,
+                    1px -1px 0 #ed7d4f,
+                    -1px -1px 0 #ed7d4f;  
+    }
+    .banner-text-section p{
+        width: 60%;
+        font-size: 18px;
+    }
+
+
+    #my-chart.column {
+    height: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+    }
+
+    .orange-button{
+        color: white;
+        background-color: #ed7d4f;
+        border-style: none;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 0.9rem 2rem;
+        border: 1px solid #ed7d4f;
+    }
+    .orange-button:hover {
+        background-color: white;
+        color: black;
+        
+    }
+
+    .orange-button2:hover{
+        background-color: white;
+        color: black;
+        
+    }
+    .orange-button2 a{
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .orange-button2:hover a{
+        color: black;
+        
+    }
+    
+    
+    .orange-button a, .orange-button2 a, .orange-button3 a, .orange-button3 i{
+        
+        color: white;
+    }
+    .orange-button2{
+        color: white;
+        background-color: #ed7d4f;
+        border-style: none;
+        padding: 0.8rem 3rem;
+        border: 1px solid #ed7d4f;
+    }
+    .white-button{
+        color: black;
+        border: 1px solid #ed7d4f;
+        background-color: white;
+        font-weight: 600;
+        padding: 0.8rem 2rem;
+    }
+    .white-button a{
+        color: black;
+    }
+    .white-button:hover{
+        background-color: #ed7d4f;
+        color: white;
+       
+    }
+    .white-button:hover a{
+        color: white;
+        
+    }
+    .vertical-navbar{
+        background-color: #2d62ed;
+        padding: 0.5rem 1.5rem;
+        height: 30rem;
+        margin-bottom: 4rem;
+    }
+    .vertical-navbar i{
+        color: white;
+    }
+    
+    .top-banner-main{
+        overflow: hidden;
+    }
+    .girl-image{
+        position: absolute;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .star-image{
+        position: absolute;
+        z-index: 1;
+        margin: 0rem 0rem 42rem 29rem;
+        background-color: #ff8245;
+        padding: 0.7rem;
+        border-radius: 20%;
+    }
+    .banner{
+        overflow: hidden;
+    }
+    .top-banner{
+        margin: 0rem 0rem 12rem 0rem;
+        overflow: hidden;
+    }
+    .top-banner-image-section{
+        overflow: hidden;
+    }
+    /* .stats-banner{
+
+    } */
+    .profiles{
+        z-index: 5;
+       position: absolute;
+       padding: 1rem 10rem 5.5rem 1rem;
+       background-color: white;
+       border-radius: 10px;
+       margin: 20rem 0rem 4rem 25rem;
+       box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .profiles p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .all-profiles{
+        background-color: white;
+     
+        border-style: none;
+    }
+    .profile-images{
+        background-color: white;
+      
+    }
+    .profile-pic{
+       border-radius: 50%; 
+       background: white;
+       padding: 0.2rem;
+       position: absolute;
+       z-index: 8;
+       margin-right: 8rem;
+    }
+    .profile-pic2{
+        position: absolute;
+        z-index: 10;
+       border-radius: 50%; 
+       background: white;
+      
+       margin-left: 3.5rem;
+       
+    }
+    .profile-pic3{
+        position: absolute;
+        z-index: 11;
+       border-radius: 50%; 
+       background: white;
+       
+       margin-left: 6.5rem;
+    }
+
+    .profile-pic22{
+        position: absolute;
+        z-index: 10;
+       border-radius: 50%; 
+       background: white;
+      
+       margin-left: 3.5rem;
+       
+    }
+    .profile-pic33{
+        position: absolute;
+        z-index: 11;
+       border-radius: 50%; 
+       background: white;
+       
+       margin-left: 6.5rem;
+    }
+    .profile-pic4{
+        position: absolute;
+        z-index: 12;
+        height: 70px;
+       border-radius: 50%; 
+       background: rgb(212, 207, 207);
+       padding: 1rem;
+       margin: 0rem 0rem 0rem 9.5rem;
+    }
+    .profile-pic44{
+        position: absolute;
+        z-index: 12;
+        height: 70px;
+       border-radius: 50%; 
+       background: rgb(212, 207, 207);
+       padding: 1rem;
+       margin: 0rem 0rem 0rem 9.5rem;
+    }
+    .profile-pic4 i{
+        color: #2d62ed;
+    }
+    .vertical-div{
+        margin-bottom: 1rem;
+    }
+
+
+    .second-banner-text h2{
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 52px;
+    }
+    .second-banner-text span{
+        color: white;
+    }
+    .second-banner-text span h2{
+
+        color: white ;
+        text-shadow: -1px 1px 0 #000,
+                    1px 1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px -1px 0 #000;  
+    }
+    .second-banner-text p{
+        font-size: 18px;
+    }
+    .orange-button3{
+        color: white;
+        background-color: #ed7d4f;
+        border-style: none;
+        padding: 0.8rem 2rem;
+    }
+    .orange-button3 a{
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .gray-a{
+        
+        color: darkgray;
+    }
+    .orange-shape{
+        background-color: #ed7d4f;
+        height: 60%;
+        width: 90%;
+       padding: 14rem 1rem 0rem 1rem;
+        color: white;
+        margin-top: 2rem;
+       
+        
+    }
+    .orange-shape p{
+        background-color: #ed7d4f; 
+        color: black;
+        position: relative;
+        
+        padding: 0rem 4rem;
+    }
+   
+    .circle i{
+        color: white;
+        background-color: #b55782;
+        padding: 2rem;
+        border-radius: 50px;
+    }
+    .semi-circle p{
+        color: white;
+        background-color: #7d2ac8;
+        /* padding: 2rem 1rem;
+        border-radius: 10px  50px 50px 10px ; */
+    }
+
+    .semi-circle{
+        background-color: #7d2ac8;
+        
+        width: 3.5rem;
+        height: 5rem;
+        background-color: #7d2ac8;
+        /* border-radius: 0rem 10rem 10rem 0; */
+
+        border-radius: 0 100% 100% 0 / 50%; 
+
+
+    }
+     .cream-shape{
+        background-color: #ebcbbb;
+        
+        width: 25px;
+        padding: 1rem 3rem;
+        position: absolute;
+        z-index: -3;
+        height: 35%;
+        margin-top: 5rem;
+    } 
+    .shapes{
+        column-gap: 1rem;
+    }
+    .middle-black-line{
+        background-color: black;
+        width: 0.1rem;
+        height: 60%;
+        position: absolute;
+        z-index: -5;
+    }   
+    .circles-half{
+        height: 95%;
+        margin-left: 1rem;
+    }
+    .circles-half i{
+        color: white;
+        background-color: #b55782;
+        padding: 1.5rem;
+        border-radius: 50px;
+        margin-bottom: 5rem;
+    }
+    .circles-half p{
+        color: white;
+        background-color: #7d2ac8;
+        border-radius: 0 100% 100% 0 / 50%;
+        padding: 2rem 0.5rem !important;
+    }
+    .second-banner-text p{
+        width: 60%;
+    }
+    .second-half p{
+        font-size: 18px;
+    }
+    .stats-banner{
+        padding: 0rem 0rem 8rem 0rem;
+    }
+    .second-banner-image{
+        border-radius: 20px;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .third-banner h6{
+        color: #2d62ed;
+        letter-spacing: 4px;
+        font-size: 20px;
+    }
+    .third-banner-text h2{
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 56px;
+    }
+    .third-banner-text p{
+        font-size: 16px;
+        width: 70%;
+        line-height: 30px;
+        padding: 1rem 0rem;
+    }
+    .third-banner-buttons{
+        column-gap: 1rem;
+    }
+    .third-banner-buttons i{
+        color: #2d62ed;
+    }
+    .play-anchor {
+        color: black;
+        font-weight: 600;
+    }
+    .play-anchor i{
+        margin-right: 8px;
+    }
+    .fourth-banner-text h2{
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 56px;
+    }
+    .fourth-banner-text p{
+        font-size: 18px;
+        margin: 2rem 0rem;
+    }
+    .third-banner-section{
+        margin-bottom: 14rem;
+    }
+    .fourth-banner-section{
+        margin-bottom: 9rem;
+    }
+    .fifth-banner-row{
+        background-color: #ebf2ff;
+        padding: 5rem 0rem;
+        border-radius: 20px;
+    }
+    .fifth-banner-row h2{
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 56px;  
+    }
+    .fifth-banner-row p{
+        margin: 1.6rem 0rem;
+        width: 70%;
+
+    }
+    .fifth-banner-row button{
+        background-color: #432678;
+        color: white;
+        padding: 0.8rem 1.7rem;
+    }
+    .circles{
+        position: absolute;
+        z-index: -1;
+    }
+    .top-circle{
+        background-color: #b6d8e3;
+        border-radius: 100% 0 0 100% / 50%;
+        padding: 1rem;
+        width: 150px;
+        height: 250px;
+        margin: 0rem 0rem 10rem 35rem;
+    }
+    .second-circle{
+        background-color: #f5d38e;
+        border-radius: 50%;
+        padding: 1rem;
+        width: 400px;
+        height: 400px;
+        margin: 12rem 30rem 0rem 0rem;
+    }
+    .sixth-banner-section{
+        margin: 10rem 0rem;
+    }
+    .features{
+        margin-bottom: 3.5rem;
+    }
+    .features p{
+        font-weight: 600;
+        font-size: 30px;
+    }
+    .features img{
+        height: 70px;
+    }
+    .dotted-line{
+       color: white;
+       height: 50px;
+       width: 270px;
+        border-top: 5px dashed darkgray;
+        position: absolute;
+        border-radius: 50% / 100% 100% 0 0;
+        margin: 0rem 40rem 22rem 0rem;
+    }
+    .dotted-line2{
+    color: white;
+       height: 50px;
+       width: 280px;
+        border-bottom: 5px dashed #f5d38e;
+        position: absolute;
+        border-radius: 50% / 0 0 100% 100%;
+        margin: 25rem 44rem 0rem 0rem;
+        transform: rotate(30deg);
+    }
+    .dotted-line3{
+        color: white;
+       height: 50px;
+       width: 280px;
+        border-top: 5px dashed rgb(222, 219, 158);
+        position: absolute;
+        border-radius: 50% / 100% 100% 0 0;
+        margin: 0rem 40rem 21rem 80rem;
+        transform: rotate(-35deg);
+    }
+    .dotted-line4{
+        height: 150px;
+       width: 150px;
+        border-bottom: 6px dashed #f5d38e;
+        position: absolute;
+        border-radius: 0 0 100% 0;
+        margin: 0rem 0rem 6rem 43rem;
+        transform: rotate(30deg);
+    }
+    .dotted-line5{
+        color: white;
+       height: 50px;
+       width: 240px;
+        border-top: 5px dashed rgb(160, 186, 231);
+        position: absolute;
+        border-radius: 50% / 100% 100% 0 0;
+        margin: 50rem 0rem 21rem 46rem;
+        transform: rotate(170deg);
+    }
+    .hover-line{
+        background-color: white;
+        height: 26px;
+        width: 4px;
+        visibility: hidden;
+        position: absolute;
+        margin-left: 4rem;
+    }
+    .navbar-span .house-tag:hover {
+        color: #000;
+    }
+    .cream-card{
+        background-color: #fdd8a7;
+        padding: 0rem 0rem 0rem 0rem;
+        width: 16rem;
+        border-radius: 20px;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .cream-card p , .purple-card p{
+        font-size: 34px;
+        font-weight: 700;
+        width: 40%;
+        padding: 1rem 0rem 0rem 1.5rem;
+        line-height: 34px;
+    }
+    .dots{
+        padding: 1.5rem;
+    }
+    .first-dot{
+        background-color: white;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+    }
+    .first-dot2{
+        background-color: lightgray;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+    }
+    .second-dot{
+        background-color: lightgray;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin-left: 4px;
+    }
+    .second-dot2{
+        background-color: white;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin-left: 4px;
+    }
+    .third-dot{
+        background-color:  lightgray;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin-left: 4px;
+    }
+    .cream-card-header{
+        padding-top: 1.5rem;
+    }
+    .cream-card-graph{
+        background-color: white;
+        margin: 0rem 2rem 0rem 2rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .cream-card-footer{
+        padding-bottom: 0.5rem;
+        margin-top: 6rem;
+    }
+    .cream-card-arrow{
+        padding: 1.5rem;
+    }
+    .cream-card-arrow-icon{
+        background-color: #4874e9;
+        color: white;
+        padding: 15px;
+        border-radius: 50%;
+        transform: rotate(40deg);
+    }
+    .fifth-banner-row a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .cream-card-arrow2{
+        padding: 1.5rem;
+    }
+    .cream-card-arrow2-icon{
+        background-color: green;
+        color: white;
+        padding: 15px;
+        border-radius: 50%;
+        transform: rotate(40deg);
+    }
+    .purple-card{
+        background-color: #debfff;
+        width: 16rem;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .purple-card-graph{
+      padding: 2rem 0rem 0rem 2rem;
+      
+    }
+    .purple-card-girl{
+        padding: 0rem 2rem 0rem 0rem;
+    }
+    .purple-card-girl-image{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+    .purple-card-graph-image{
+        background-color: white;
+        padding: 0.5rem 0.5rem;
+    }
+    .blue-card{ 
+        background-color: #c7e8fd;
+        padding: 0rem 3rem 0rem 0rem;
+        border-radius: 20px;
+        width: 23rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .loading-circle{
+        height: 130px;
+        width: 130px;
+        
+        margin: 1.5rem;
+        border: 1.2rem solid white;
+        border-radius: 160px;
+        border-bottom-color: #01cbf3;
+        border-top-color: #01cbf3;
+        border-right-color: #01cbf3;
+        box-sizing: border-box;
+        /* background: conic-gradient(rgb(15, 255, 7) 30deg rgb(199, 42, 42)); */
+        box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    }
+
+    #value{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .blue-card-text h3{
+        font-weight: 700;
+    }
+    .blue-card-text p{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .cards{
+        column-gap: 10px;
+        
+    }
+    .yellow-headshot-img{
+        background-color: #f8c147;
+    }
+    .fourth-banner-column{
+        column-gap: 1rem;
+    }
+    .fourth-banner-column img{
+        border-radius: 20px;
+    }
+    .profiles2{
+        z-index: 5;
+       position: absolute;
+       padding: 1rem 4rem 5.5rem 1rem;
+       background-color: white;
+       border-radius: 10px;
+       margin: 0rem 0rem 0rem 0rem;
+       box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .profiles2 p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .fourth-banner-row{
+        column-gap: 0px;
+    }
+    
+    /* #my-chart.column {
+        height: 200px;
+        max-width: 300px;
+        margin: 0 auto;
+        }
+        #column-example-1 {
+        height: 200px;
+        max-width: 300px;
+        margin: 0 auto;
+         
+         filter: drop-shadow(0em 3em 0.6em white);
+        } */
+
+        .fifth-banner-progress-card{
+            background-color: white;
+            box-shadow: 0.4em 0.4em 1em darkgray;
+            
+        }
+    .loading-circle2{
+        height: 90px;
+        width: 90px;
+        
+        margin: 0.8rem;
+        border: 0.8rem solid lightgray;
+        border-radius: 160px;
+        border-bottom-color: #5860fc;
+        border-top-color: #5860fc;
+        border-right-color: #5860fc;
+        box-sizing: border-box;
+        /* background: conic-gradient(rgb(15, 255, 7) 30deg rgb(199, 42, 42)); */
+        box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    }
+    #value2{
+        font-size: 26px;
+        font-weight: 600;
+        color: #01cbf3;
+    }
+    .fifth-banner-progress-card-text h5{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .fifth-banner-progress-card-text h4{
+        font-weight: 600;
+        font-size: 28px;
+    }
+    .fifth-banner-progress-card-bar p{
+        float: right;
+        
+    }
+    .fifth-banner-first-card{
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    
+        
+        
+    
+    .fifth-banner-second-card{
+        background-color: white;
+        width: 10rem;
+        border-radius: 20px;
+        height: 4rem;
+        margin-left: 25rem;
+        position: absolute;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .fifth-banner-second-card-text{
+       margin: 1rem 0rem 0rem 1rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .fifth-banner-first-card-text span{
+        color: #b9ebcd;
+    }
+    .fifth-banner-second-card-text h6{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .fifth-banner-second-card-text p{
+        font-weight: 400;
+        font-size: 12px;
+    }
+    
+    .fifth-banner-cards{
+        margin: 1rem 0rem 0rem 1rem;
+    }
+    /* .loading-circle:before{
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        height: 180px ;
+        width: 180px;
+        background-color: #c7e8fd;
+        box-shadow: inset 3px 3px 5px -1px rgb(255, 0, 0)
+                    inset -3px -3px 5px -1px rgba(225, 42, 42, 0.904)
+    } */
+    .first-line{
+        height: 10rem;
+        width: 4.5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgb(245,245,245);
+background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(212,146,251,1) 62%);
+    }
+    .second-line{
+        height: 13rem;
+        width: 4.5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgb(245,245,245);
+background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(245,132,115,1) 62%);
+    }
+    .third-line{
+        height: 9rem;
+        width: 4.5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgb(245,245,245);
+background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(162,209,246,1) 62%);
+    }
+    .dots-design{
+        position: absolute;
+        z-index: -1;
+        margin: 19.5rem 0rem 0rem 10rem;
+    }
+    .dots-design-top img{
+        opacity: 0.3;
+    }
+    .dots-design-bottom img{
+        opacity: 0.3;
+    }
+
+    .dots-design2{
+        position: absolute;
+        z-index: -4;
+        margin: 34rem 0rem 0rem 10rem;
+        
+       
+    }
+    .dots-design2-top img{
+        opacity: 0.3;
+    }
+    .dots-design2-bottom img{
+        opacity: 0.3;
+    }
+    .small-images{
+        position: absolute;
+        z-index: -2;
+        margin: 0rem 0rem 30rem 0rem;
+    }
+    .image-1{
+        margin: 8rem 0rem 0rem 0rem;
+    }
+    .image-2{
+       margin: 3rem 0rem 0rem 0.5rem; 
+    }
+    .image-3{
+        margin: 10rem 2rem 0rem 0rem;
+    }
+    .image-4{
+        margin: 5rem 0rem 0rem 3rem;
+        transform: rotate(20deg);
+    }
+    .image-5{
+        margin: 8rem 0rem 3rem 0rem;
+        transform: rotate(20deg);
+    }
+    .image-6{
+        margin: 0rem 10rem 1rem 0rem;
+        transform: rotate(20deg);
+    }
+    .small-images2{
+        position: absolute;
+        z-index: -2;
+        margin: 0rem 17rem 30rem 0rem;
+    }
+    .image-7{
+       margin: 9rem 0rem 0rem 1rem; 
+    }
+    .image-8{
+       margin: 2rem 1rem 0rem 0rem; 
+    }
+    .image-9{
+       margin: 5rem 0rem 0rem 0rem; 
+    }
+    .image-10{
+       margin: 6rem 5rem 5rem 0rem;
+       transform: rotate(20deg); 
+    }
+
+   
+
+    @media (min-width: 412px) and (max-width: 567px ){
+
+        .orange-button{
+            font-size: 16px;
+            width: fit-content;
+        }
+        .header-list{
+            visibility: hidden;
+           
+        }
+        .header{
+            margin-left: 2rem;
+            margin-right: -2rem;
+        }
+        .top-banner{
+            margin-left: 2rem;
+            margin-right: -2rem;
+            margin-bottom: 7rem;
+        }
+        .star-image{
+            margin-right: 6rem;
+        }
+        .top-banner-main{
+            margin-top: 3rem;
+            column-gap: 3rem;
+            margin-right: 0rem;
+        }
+        .profiles{
+            margin-right: 10rem;
+        }
+        .stats-banner{
+            margin-left: 2rem;
+            column-gap: 2rem;
+        }
+        .second-banner-image{
+            height: 210px;
+        }
+        
+        .shape-div{
+            margin-left: 2rem;
+        }
+        .second-banner-text{
+            margin-top: 3rem;
+            
+        }
+        .second-banner-second-div{
+            margin-left: 3rem;
+        }
+        .third-banner-section{
+            margin-left: 2rem;
+            
+        }
+        .fourth-banner-section{
+            margin-left: 2rem;
+            margin-right: -9rem;
+            
+           
+        }
+        .fourth-banner-text{
+            margin-left: 0rem;
+            margin-top: 7rem;
+        }
+        .profile-pic{
+        margin-right: 0;
+    }
+    .profile-pic44{
+        margin-left: 3.5rem;
+        
+    }
+        .profile-pic22{
+            visibility: hidden;
+        }
+        .profile-pic33{
+            visibility: hidden;
+        }
+        .ellipsis-icon{
+            visibility: hidden;
+        }
+        .cards{
+            margin-top: 2rem;
+        }
+        .purple-card{
+            margin-left: 6rem;
+        }
+        .blue-card{
+            margin-left: 7rem;
+        }
+        .loading-circle{
+            height: 100px;
+            width: 100px;
+            margin-right: 0rem;
+        border: 0.5rem solid white;
+        border-radius: 160px;
+        border-bottom-color: #01cbf3;
+        border-top-color: #01cbf3;
+        border-right-color: #01cbf3;
+        box-sizing: border-box;
+        /* background: conic-gradient(rgb(15, 255, 7) 30deg rgb(199, 42, 42)); */
+        box-shadow: 0 0 7px rgba(0,0,0,0.3);
+            
+        }
+        .fifth-banner-section{
+            margin-left: 2rem;
+            margin-right: -8rem;
+           
+        }
+        .shock-image{
+            height: 100px;
+        }
+        .dotted-line{
+     visibility: hidden;
+           
+    }
+    .dotted-line2{
+        visibility: hidden;
+    }
+    .dotted-line3{
+        visibility: hidden;
+    }
+    .dotted-line4{
+        visibility: hidden;
+    }
+    .dotted-line5{
+        visibility: hidden;
+        
+    }
+    .shock-image{
+        height: 370px;
+    }
+    .sixth-banner-left-div{
+        margin-bottom: -6rem;
+    }
+    .sixth-banner-section{
+        margin-left: 2rem;
+        margin-right: -5rem;
+    }
+    .dots-design2{
+        margin-top: 27rem;
+    }
+    }
+
+    @media (min-width: 320px) and (max-width: 412px ){
+        
+        .profile-pic{
+        margin-right: 0;
+    }
+    .profile-pic44{
+        margin-left: 3.5rem;
+        
+    }
+        .profile-pic22{
+            visibility: hidden;
+        }
+        .profile-pic33{
+            visibility: hidden;
+        }
+        img{
+            
+        }
+        .header-list{
+            visibility: hidden;
+           
+        }
+        .header{
+            margin-left: 3rem;
+            margin-right: -12rem;
+        }
+        .top-banner{
+            margin-left: 2rem;
+            margin-right: -12rem;
+            margin-bottom: 7rem;
+        }
+        .top-banner-main{
+            margin-top: 3rem;
+            
+            column-gap: 0.5rem;
+        }
+        .banner-image{
+            height: 600px;
+            width: 100px;
+        }
+        .girl-image{
+            height: 600px;
+        }
+        .profiles{
+            margin-right: 14rem;
+        }
+        .star-image{
+            margin-right: 6.5rem;
+            margin-top: 4rem;
+        }
+        .stats-banner{
+            margin-left: 2rem;
+        }
+        .second-banner-image{
+            height: 170px;
+        }
+        .second-banner-text{
+            margin-top: 3rem;
+            margin-left: 0rem;
+            margin-right: -12rem;
+        }
+        .shape-div{
+            margin-right: -12rem;
+            z-index: -3;
+            opacity: 0.3;
+        }
+        .third-banner-section{
+            margin-left: 2rem;
+            margin-right: -12rem;
+        }
+        .fourth-banner-section{
+            margin-left: 2rem;
+            
+            margin-right: -12rem;
+        }
+        .fourth-banner-text{
+            margin-left: 0rem;
+        }
+        .fifth-banner-section{
+            margin-left: 2rem;
+            margin-right: -9rem;
+           
+        }
+        .fifth-banner-row{
+            margin-right: -6rem;
+        }
+        .fifth-banner-second-card{
+            
+        }
+        .sixth-banner-section{
+            margin-left: 2rem;
+            margin-right: -9rem;
+        }
+        .shock-image{
+            height: 300px;
+        }
+        .purple-card{
+            margin-left: 2rem;
+            margin-top: 3rem;
+        }
+        .cream-card{
+            width: 13rem;
+        }
+        .cream-card-graph{
+            height: 60px;
+        }
+        .blue-card{
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
+        .dots-design2{
+            margin-top: 30rem;
+            margin-right: -3rem;
+        }
+        .ellipsis-icon{
+            visibility: hidden;
+        }
+        .sixth-banner-left-div{
+            margin-top: -10rem;
+            margin-bottom: -14rem;
+            margin-left: 5rem;
+        }
+        .features-right-div{
+            margin-top: -4rem;
+            margin-bottom: -4rem;
+            margin-left: 0rem;
+        }
+        .dotted-line{
+     visibility: hidden;
+           
+    }
+    .dotted-line2{
+        visibility: hidden;
+    }
+    .dotted-line3{
+        visibility: hidden;
+    }
+    .dotted-line4{
+        visibility: hidden;
+    }
+    .dotted-line5{
+        visibility: hidden;
+        
+    } 
+       
+    }
+
+    @media  (min-width: 768px ) {
+
+        .bars-icon{
+            visibility: hidden;
+        }
+    }
+
+    @media (min-width: 568px) and (max-width: 767px ){
+        
+        .profile-pic{
+        margin-right: 0;
+    }
+    .profile-pic44{
+        margin-left: 3.5rem;
+        
+    }
+        .profile-pic22{
+            visibility: hidden;
+        }
+        .profile-pic33{
+            visibility: hidden;
+        }
+        .header-list{
+            visibility: hidden;
+        }
+        .orange-button{
+        font-size: 16px;
+        padding: 0.4rem 1.8rem;
+    }
+    .top-banner-main {
+        margin-top: 3rem;
+        column-gap: 1rem;
+    }
+    .star-image{
+            margin: 0rem 0rem 42rem 27rem;
+        }
+        .second-banner-text{
+            margin-top: 2.5rem;
+        }
+        .cards{
+            margin-top: 4rem;
+
+        }
+        .cream-card{
+        background-color: #fdd8a7;
+        padding: 0rem 1rem 0rem 0rem;
+        margin: 0;
+        height: 19.5rem;
+        width: 12rem;
+      
+    }
+    .purple-card{
+        background-color: #debfff;
+        width: 10rem;
+        height: 21rem;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+     
+    .blue-card{ 
+        background-color: #c7e8fd;
+        padding: 0rem 0rem 0rem 0rem;
+        border-radius: 20px;
+        width: 4rem;
+        height: 10rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    } 
+    .cream-card-graph{
+        height: 10px;
+        margin-left: 0rem;
+    }
+    .purple-card-graph-image{
+        height: 50px;
+    }
+    .cream-card-man-image{
+        height: 20px;
+    }
+    .purple-card-girl-image{
+        height: 90px;
+    }
+    .cream-card p{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .purple-card-text p{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .cream-card-footer{
+        padding-bottom: 0.5rem;
+        margin-top: 0rem;
+    }
+        .purple-card{
+            margin-left: 3rem;
+        }
+        .blue-card{
+            margin-left: 0rem;
+            
+        }
+        .loading-circle{
+            height: 100px;
+            width: 100px;
+            margin-right: 2rem;
+        border: 0.5rem solid white;
+        border-radius: 160px;
+        border-bottom-color: #01cbf3;
+        border-top-color: #01cbf3;
+        border-right-color: #01cbf3;
+        box-sizing: border-box;
+        /* background: conic-gradient(rgb(15, 255, 7) 30deg rgb(199, 42, 42)); */
+        box-shadow: 0 0 7px rgba(0,0,0,0.3);
+            
+        }
+        .cream-card-graph{
+            margin-left: 0rem;
+            height: 60px;
+        }
+        
+        .dots-design{
+           visibility: hidden;
+        }
+        .dots-design2{
+        position: absolute;
+        z-index: -4;
+        margin: 20rem 0rem 0rem 10rem;
+        
+       
+    } 
+    
+    .shock-image{
+            height: 400px;
+        }
+        .dotted-line{
+     visibility: hidden;
+           
+        }
+        .dotted-line2{
+            visibility: hidden;
+        }
+        .dotted-line3{
+            visibility: hidden;
+        }
+        .dotted-line4{
+            visibility: hidden;
+        }
+        .dotted-line5{
+            visibility: hidden;
+            
+        } 
+        .second-banner-image{
+            height: 190px;
+        }
+        .profiles{
+            margin: 18rem 0rem 4rem 10rem;
+        }
+        .profiles2{
+        z-index: 5;
+       position: absolute;
+       padding: 1rem 4rem 5.5rem 1rem;
+       background-color: white;
+       border-radius: 10px;
+       margin: 0rem 8rem 0rem 0rem;
+       box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    /* .profile-pic2{
+        visibility: hidden;
+    }
+    .profile-pic3{
+        visibility: hidden;
+    }
+    .profile-pic4{
+        position: absolute;
+        z-index: 12;
+        height: 70px;
+       border-radius: 50%; 
+       background: rgb(212, 207, 207);
+       padding: 1rem;
+       margin: 0rem 20rem 0rem 4rem;
+    } */
+    .fourth-banner-text{
+        margin-top: 2rem;
+    }
+    .fifth-banner-second-card{
+        
+    }
+    .ellipsis-icon{
+        visibility: hidden;
+    }
+    .cream-card-graph{
+        height: 40px;
+        margin-left: 3rem;
+    }
+    .sixth-banner-left-div{
+        margin-bottom: -7rem;
+    }
+
+}
+    
+        
+        
+    
+
+    @media (min-width: 768px) and (max-width: 991px ){
+
+        .dots-design2{
+            margin-top: 28rem;
+        }
+        .logo-image{
+            height: 70px;
+        }
+        .header-list li{
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .orange-button{
+        font-size: 14px;
+        padding: 0.4rem 1.5rem;
+    }
+    .star-image{
+            margin: 0rem 0rem 42rem 38rem;
+        }
+        .top-banner-main{
+            column-gap: 1rem;
+        }
+        .second-banner-text{
+            margin-top: 3rem;
+        }
+        .shape-div{
+            margin-top: 3rem;
+        }
+        .yellow-headshot-section{
+            margin-bottom: 2rem;
+        }
+        .fourth-banner-text{
+            margin-top: 4.5rem;
+        }
+        .first-line{
+        height: 10rem;
+        width: 6.5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgb(245,245,245);
+background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(212,146,251,1) 62%);
+    }
+    .second-line{
+        height: 13rem;
+        width: 6.5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgb(245,245,245);
+background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(245,132,115,1) 62%);
+    }
+    .third-line{
+        height: 9rem;
+        width: 6.5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgb(245,245,245);
+background: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(162,209,246,1) 62%);
+    }
+    .dotted-line{
+       
+          visibility: hidden;
+        }
+        .dotted-line2{
+            visibility: hidden;
+        }
+        .dotted-line3{
+            visibility: hidden;
+        }
+        .dotted-line4{
+            visibility: hidden;
+        }
+        .dotted-line5{
+           visibility: hidden; 
+            
+        } 
+        .shock-image{
+            height: 400px;
+        }
+        .features-last{
+            width: 100%;
+        }
+        .features-last2{
+            width: 100%;
+            margin-left: 2rem;
+        }
+        .features-right-div{
+            margin-top: 0rem;
+            
+        }
+        .sixth-banner-section{
+            margin: 0;
+        }
+        
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px ){
+
+        .nav-list li{
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .orange-button {
+            font-size: 14px;
+        }
+        .star-image{
+            margin: 0rem 0rem 42rem 20rem;
+        }
+        .profiles{
+            margin: 40rem 2rem 4rem 10rem;
+        }
+        .fifth-banner-second-card{
+            margin-left: 8REM;
+            margin-top: 10rem;
+        }
+        .second-banner-first-div{
+
+
+        }
+
+        .stats-banner-images{
+            margin-left: 0rem;
+            
+        }
+        .second-banner-image{
+            height: 160px;
+        }
+        .yellow-headshot-section{
+            margin-top: 4.2rem;
+        }
+        .banner-buttons2{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center; 
+            margin-left: 4rem;
+            
+        }
+        .cream-card{
+        background-color: #fdd8a7;
+        padding: 0rem 0rem 0rem 0rem;
+        margin: 0;
+        height: 21rem;
+        width: 12rem;
+        border-radius: 20px;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .purple-card{
+        background-color: #debfff;
+        width: 12rem;
+        height: 21rem;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .blue-card{ 
+        background-color: #c7e8fd;
+        padding: 0rem 0rem 0rem 0rem;
+        border-radius: 20px;
+        width: 12rem;
+        height: 10rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .cards-left-part{
+        align-items: flex-start;
+    }
+    .cream-card-graph{
+        height: 50px;
+        margin-left: 2.5rem;
+    }
+    .purple-card-graph-image{
+        height: 50px;
+    }
+    .cream-card-man-image{
+        height: 40px;
+    }
+    .purple-card-girl-image{
+        height: 90px;
+    }
+    .cream-card p{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .purple-card-text p{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .cream-card-footer{
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
+    }
+    .loading-circle{
+        height: 60px;
+        width: 60px;
+        margin-right: 2rem;
+        border: 0.4rem solid white;
+        border-radius: 160px;
+        border-bottom-color: #01cbf3;
+        border-top-color: #01cbf3;
+        border-right-color: #01cbf3;
+        box-sizing: border-box;
+        /* background: conic-gradient(rgb(15, 255, 7) 30deg rgb(199, 42, 42)); */
+        box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    }
+    #value{
+        font-size: 18px;
+    }
+    .blue-card-text h3{
+        font-size: 20px;
+    }
+    .dots-design{
+        position: absolute;
+        z-index: -1;
+        margin: 13.5rem 4rem 0rem 10rem;
+    }
+    .dots-design2{
+        position: absolute;
+        z-index: -4;
+        margin: 25rem 0rem 0rem 10rem;
+        
+       
+    } 
+
+
+    }
+
+    @media (max-width: 1199px ){
+        .dotted-line{
+            margin: 7rem 35rem 22rem 0rem;
+            width: 120px; 
+            height: 20px;
+        }
+        .dotted-line2{
+            width: 180px;
+            transform: rotate(15deg);
+            margin: 8rem 30rem 0rem 0rem;
+        }
+        .dotted-line3{
+            width: 160px;
+        
+        margin: 7rem 32rem 21rem 63rem;
+        }
+        .dotted-line4{
+            width: 80px;
+            margin: 4rem 0rem 7rem 36rem;
+        }
+        .dotted-line5{
+            width: 60px;
+            height: 15px;
+           
+            margin: 30rem 1rem 0rem 35rem;
+        }
+        .sixth-banner-row-left-line{
+            font-size: 20px;
+            display: block;
+            width: 88%;
+        }
+        .features-last{
+            width: 54%;
+        }
+        
+        .features-right-div{
+            margin-top: 7rem;
+            
+        }
+        
+    }
+    
+    @media (max-width: 1200px ){
+
+        /* .dotted-line{
+            visibility: hidden;
+        }
+        .dotted-line2{
+            visibility: hidden;
+        }
+        .dotted-line3{
+            visibility: hidden;
+        }
+        .dotted-line4{
+            visibility: hidden;
+        }*/
+        .dotted-line5{
+            
+            
+        } 
+        .sixth-banner-row p{
+            font-size: 20px;
+        }
+        .dotted-line2{
+            margin: 20rem 44rem 0rem 0rem;
+        }
+        .dotted-line5{
+        
+            
+        width: 30px;
+
+        
+    }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px ){
+
+
+        .star-image{
+            margin: 0rem 0rem 42rem 25rem;
+        }
+        .blue-card{
+            width: 18rem;
+        }
+
+        .profiles{
+            margin: 20rem 0rem 4rem 10rem;
+        }
+        .loading-circle{
+        height: 60px;
+        width: 60px;
+        
+       margin-right: 2rem;
+        border: 0.4rem solid white;
+        border-radius: 160px;
+        border-bottom-color: #01cbf3;
+        border-top-color: #01cbf3;
+        border-right-color: #01cbf3;
+        box-sizing: border-box;
+        /* background: conic-gradient(rgb(15, 255, 7) 30deg rgb(199, 42, 42)); */
+        box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    }
+        #value{
+            font-size: 19px;
+            margin: 6rem 0rem 0rem 2rem;
+        }
+        .cream-shape{
+        background-color: #ebcbbb;
+        
+        width: 25px;
+        padding: 1rem 3rem;
+        position: absolute;
+        z-index: -3;
+        height: 30%;
+        margin-top: 5rem;
+    }   
+    .cream-card{
+        background-color: #fdd8a7;
+        padding: 0rem 0rem 0rem 0rem;
+        margin: 0;
+        width: 16rem;
+        border-radius: 20px;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .purple-card{
+        background-color: #debfff;
+        width: 16rem;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .blue-card{ 
+        background-color: #c7e8fd;
+        padding: 0rem 3rem 0rem 0rem;
+        border-radius: 20px;
+        width: 23rem;
+        box-shadow: 0.4em 0.4em 1em darkgray;
+    }
+    .dots-design2{
+        position: absolute;
+        z-index: -4;
+        margin: 30rem 0rem 0rem 10rem;
+        
+       
+    } 
+        .image-3{
+            margin: 12rem 0rem 0rem 0rem;
+        }
+        .second-banner-image{
+            height: 190px;
+        }
+        .cards-right-part{
+            margin-left: 1.6rem;
+        }
+        .fourth-banner-section{
+            margin-left: 3rem;
+            column-gap: 2rem;
+        }
+        .fourth-banner-row{
+            column-gap: 0;
+        }
+        .yellow-headshot-section{
+            margin-top: 1.5rem;
+        }
+        .fifth-banner-row{
+            padding: 5rem 3rem 5rem 0rem;
+            margin-left: 1.5rem;
+        }
+        .dotted-line{
+            margin: 5rem 40rem 22rem 0rem;
+            width: 180px; 
+            height: 40px;
+        }
+        .dotted-line2{
+            width: 240px;
+            transform: rotate(20deg);
+        }
+        .dotted-line3{
+            width: 160px;
+        
+        margin: 5rem 35rem 21rem 63rem;
+        }
+        .dotted-line4{
+            width: 110px;
+        
+        margin: 0rem 0rem 7rem 40rem;
+        }
+        .dotted-line5{
+        color: white;
+       height: 20px;
+       width: 100px;
+        border-top: 5px dashed rgb(160, 186, 231);
+        position: absolute;
+        border-radius: 50% / 100% 100% 0 0;
+        margin: 52rem 0rem 35rem 42rem;
+        transform: rotate(360deg);
+    }
+    
+    }
+    
+    
+  </style>
+
+<body>
+
+    <section class="header mt-3 pb-5">
+        <div class="container">
+            <nav class="row justify-content-between align-items-center text-align-center ">
+                <div class="col-2 d-flex justify-content-start align-items-center p-0">
+                    <i class="fas fa-bars bars-icon fa-lg"></i>
+                    <img src="assets\images\original-1b68a5fd87d2dafa72425aa8ac8b49d8.jpg" alt="" class="logo-image">
+                </div>
+    
+                <div class="col-8 nav-list text-align-center">
+                    <ul class="list-unstyled d-flex justify-content-center align-items-center text-align-center header-list m-0">
+                        <a href="#" class="col-3"><li class=" d-flex justify-content-center align-items-center">Home</li></a>
+                        <a href="#" class="col-3"><li class=" d-flex justify-content-center align-items-center">About</li></a>
+                        <a href="#" class="col-3"><li class="d-flex justify-content-center align-items-center justify-items-center">Our Capatability</li></a>
+                        <a href="#" class="col-3"><li class=" d-flex justify-content-center align-items-center">Pick a topic</li></a>
+                    </ul>
+                </div>
+    
+                <div class="col-2 d-flex justify-content-end align-items-center p-0">
+                    <button class="orange-button m-0">Contact</button>
+                </div>
+                
+            </nav>
+        </div>
+        
+    </section>
+
+    <section class="top-banner">
+        <div class="container ">
+            <div class="banner w-100">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-lg-6 banner-text-section d-flex flex-column justify-content-end align-items-flex-end">
+                        <h1 class="m-0 py-4">Organize your <span > <h1 class="m-0">business</h1> </span> for success</h1>
+                        <p class="pb-lg-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="banner-buttons">
+                            <button class="orange-button2"> <a href="#">Join Us</a></button>
+                            <button class="white-button"><a href="#">Read the doc</a></button>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-6 p-0 d-flex justify-content-between align-items-end top-banner-main">
+                        <div class="col-lg-3 d-grid justify-content-center align-items-end vertical-div">
+                            <div class="small-images ">
+                                <img src="assets\images\slash.png" alt="" height="25" class="image-4">
+                                <img src="assets\images\slash.png" alt="" height="25" class="image-5">
+                                <img src="assets\images\add-button (1).png" alt="" height="15" class="image-1">
+                                <img src="assets\images\add-button.png" alt="" height="18" class="image-2">
+                                <img src="assets\images\add-button (1).png" alt="" height="15" class="image-3">
+                                
+                                
+                                <img src="assets\images\slash.png" alt="" height="15" class="image-6">
+                            </div>
+                            
+                            <div class="vertical-navbar m-0 d-grid justify-content-center align-items-center">
+                                <i class="fas fa-bars fa-lg d-flex justify-content-center align-items-center"></i>
+
+                                <span class=" d-flex justify-content-center align-items-center navbar-span">
+                                    <i class="fas fa-house fa-lg house-tag"></i>
+                                    <!-- <div class="hover-line d-flex justify-content-center align-items-center"></div> -->
+                                </span>
+                            
+                            <i class="fas fa-print fa-lg"></i>
+                            <i class="fas fa-chart-pie fa-lg"></i>
+                           
+                            <i class="fas fa-sliders fa-lg"></i>
+                            <i class="fas fa-gear fa-lg"></i>
+                            </div>
+                            
+
+                            
+                        </div>
+                        <div class="col-lg-9 d-flex justify-content-center align-items-flex-end top-banner-image-section">
+                            <figure class="image-figure d-flex justify-content-center align-items-center">
+                                <div class="small-images2">
+                                    <img src="assets\images\add-button.png" alt="" height="18" class="image-7">
+                                    <img src="assets\images\add-button (1).png" alt="" height="10" class="image-8">
+                                    <img src="assets\images\add-button.png" alt="" height="10" class="image-9">
+                                    <img src="assets\images\slash.png" alt="" height="10" class="image-10">
+                                </div>
+                                <img src="assets\images\women_1-4-removebg-preview.png" alt="" class="girl-image" height="700">
+                                <img src="assets\images\favorite.png" alt="" height="50" class="star-image">
+                                
+                                <img src="https://www.xmple.com/wallpaper/linear-orange-gradient-purple-2736x1824-c2-ff8c00-8a2be2-a-165-f-14.svg" alt="" class="banner-image w-100 p-0 m-0" height="700">
+                                <div class="profiles d-flex flex-column justify-content-center align-items-flex-start">
+                                    <p>Top Rated</p>
+                                    
+                                        <div class="all-profiles">
+                                            
+                                            <img src="assets\images\istockphoto-1171169127-612x612.jpg" alt="" height="70" class="profile-pic">
+                                            <img src="assets\images\istockphoto-1301953681-170667a.jpg" alt="" height="70" class="profile-pic2">
+                                            <img src="assets\images\janel-lee_photography_cincinnati_ohio_professional_headshots_personal_branding_justin_england-2.jpg" alt=" " height="70" class="profile-pic3">
+                                            <div class="profile-pic4 d-flex justify-content-center align-items-center">
+                                                <i class="fas fa-3"></i>
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                            
+                                        </div>
+                                    
+                                    
+                                    
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-banner">
+        <div class="container">
+            <div class="second-banner d-flex flex-lg-row flex-column">
+                <div class="row ">
+                    <div class="col-lg-6 d-flex justify-content-between align-items-flex-start second-banner-first-div">
+
+                        <div class="col-lg-2 d-grid justify-content-center align-items-flex-start">
+                            <div class="vertical-navbar m-0 d-grid justify-content-between align-items-center">
+                                
+                                <i class="fas fa-bars fa-lg"></i>
+                                
+                                <span class="navbar-span">
+                                    <i class="fas fa-house fa-lg house-tag"></i>
+                                    <div class="hover-line d-flex justify-content-center align-items-center"></div>
+                                </span>
+                                   
+                              
+                                <i class="fas fa-folder fa-lg"></i>
+                                <i class="fas fa-chart-pie fa-lg"></i>
+                                
+                                <i class="fas fa-sliders fa-lg"></i>
+                                <i class="fas fa-gear fa-lg"></i>
+                           
+                            </div>
+                            
+                                
+                            
+
+                            
+                        </div>
+
+
+                        <div class="col-lg-10 p-0 m-0">
+                            <div class="stats-banner-images d-grid justify-content-center align-items-center p-4">
+                                <img src="assets\images\Find-maximum-of-minimum-for-every-window-size-in-a-given-array.jpg" class="mb-3 second-banner-image" height="250" alt="" >
+                                <img src="assets\images\dvt_graph_line_uc.png" class="second-banner-image" height="240"  alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center align-items-flex-start second-banner-second-div">
+                        <div class="second-banner-text col-lg-9 d-grid justify-content-center align-items-center align-content-center">
+                            <h2 class="pb-3">The Impacts of <span><h2 class="m-0">organizing</h2></span> your business</h2>
+                            <p class="pb-lg-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="second-banner-buttons">
+                                <button class="orange-button3"><a href="#">Try free demo <i class="fas fa-chevron-down"></i></a></button>
+                                <a href="#" class="gray-a">- Web,iOS and Android</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 d-flex flex-row justify-content-center align-items-flex-start shape-div">
+                            <!-- <div class="cream-shape d-flex justify-content-center align-items-center">
+                            </div>
+                            <div class="shapes d-flex justify-content-between align-items-center">
+                                <div class="first-half col-lg-6">
+                                    <div class="orange-shape p-0 m-0">
+
+                                            <p  style="transform: rotate(270deg); transform-origin: (0 0);" class="vertical-line px-1 py-4">Business</p> -->
+
+                                            <!-- <p  style="transform: rotate(270deg); transform-origin: (0 0);" class="py-3">on</p>
+                                            <p  style="transform: rotate(270deg); transform-origin: (0 0);" class="p-0">rated</p>
+                                            <p  style="transform: rotate(270deg); transform-origin: (0 0);" class="p-0">Top </p> -->
+                                        
+                                            <!-- style="transform: rotate(270deg); transform-origin: (0 0); w-10" 
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="second-half col-lg-6 d-grid justify-content-between align-items-flex-start">
+                                    <div class="circle d-flex justify-content-between align-items-center">
+                                        <i class="fas fa-chevron-down d-flex justify-content-center align-items-center"></i>
+                                    </div>
+
+                                    <div class="semi-circle d-flex justify-content-center align-items-center">
+                                        <p class="p-0 m-0 d-flex justify-content-center align-items-center">4.7</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                            <div class="middle-black-line"></div>
+                            <div class="cream-shape">
+
+                            </div>
+
+                            <div class="first-half col-lg-6">
+                                <div class="orange-shape mr-2"></div>
+                            </div>
+
+                            <div class="second-half col-lg-6">
+                                <div class="d-grid justify-content-between align-items-center justify-items-center circles-half">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <p>4.7</p>
+                                </div>
+                            </div>
+                            <!-- <div class="cream-shape d-flex justify-content-center align-items-center"></div> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="third-banner-section">
+        <div class="container">
+            <div class="row third-banner align-items-center">
+                <div class="col-lg-6 third-banner-text">
+                    <h6>Task's</h6>
+                    <h2>Map Out Your Daily Tasks And Action Items.</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, architecto delectus sed ab deleniti recusandae quos incidunt!</p>
+                    <div class="third-banner-buttons d-flex justify-content-start align-items-center">
+                        <button class="orange-button3"><a href="#">Get Started</a>    </button>
+                        <!-- <button class="play-button "><i class="fas fa-circle-play fa-2x d-flex justify-content-center align-items-center"></i> Play now</button> -->
+                        <a href="#" class="p-0 m-0 d-flex justify-content-start align-items-center play-anchor"><i class="fas fa-circle-play fa-2x "></i>Play now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-flex cards">
+                    <div class="dots-design2 d-flex flex-column">
+                        <div class="dots-design2-top">
+                            <img src="assets\images\dots.png" alt="" height="80">
+                            <img src="assets\images\dots.png" alt="" height="80">
+                        </div>
+                        
+                        <div class="dots-design2-bottom">
+                            <img src="assets\images\dots.png" alt="" height="80">
+                            <img src="assets\images\dots.png" alt="" height="80">
+                        </div>
+                    </div>
+                    <div class="col-5 d-grid align-items-lg-end align-items-center mb-5 cards-left-part">
+                        <div class="cream-card">
+                            <div class="cream-card-header d-flex justify-content-center align-items-flex-start">
+                                <div class="col-4">
+                                    <img src="assets\images\man.png" alt="" class="p-0 m-0" height="150" class="cream-card-man-image">
+                                </div>
+                                <div class="col-8">
+                                    <img src="assets\images\excellinechangecolor04large.jpg" alt="" height="80" class="cream-card-graph">
+                                </div>
+                                
+                            </div>
+                            <p>Growth Rate</p>
+                            <div class="cream-card-footer d-flex justify-content-between align-items-center">
+                                <div class="dots d-flex justify-content-center align-items-center">
+                                    <div class="first-dot"></div>
+                                    <div class="second-dot"></div>
+                                    <div class="third-dot"></div>
+                                </div>
+
+                                <div class="cream-card-footer-icon">
+                                    <span class="cream-card-arrow">
+                                        <i class="fas fa-arrow-up cream-card-arrow-icon"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-7 d-flex flex-column cards-right-part">
+                        <div class="purple-card d-flex flex-column">
+                            <div class="purple-card-graph d-flex"> 
+                                <img src="assets\images\excellinechangecolor04large.jpg" alt="" height="90" class="purple-card-graph-image">
+                            </div>
+                            <div class="purple-card-girl d-flex justify-content-end">
+                                <img src="assets\images\reading.png" alt=""  height="130" class="purple-card-girl-image">
+                            </div>
+                            <div class="purple-card-text">
+                                <p>Screen Time</p>
+                            </div>
+                            <div class="purple-card-footer d-flex justify-content-between align-items-center">
+                                <div class="dots d-flex justify-content-center align-items-center">
+                                    <div class="first-dot2"></div>
+                                    <div class="second-dot2"></div>
+                                    <div class="third-dot"></div>
+                                </div>
+
+                                <span class="cream-card-arrow2">
+                                    <i class="fas fa-arrow-up cream-card-arrow2-icon"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="dots-design d-flex flex-column">
+                            <div class="dots-design-top">
+                                <img src="assets\images\dots.png" alt="" height="80">
+                                <img src="assets\images\dots.png" alt="" height="80">
+                            </div>
+                            
+                            <div class="dots-design-bottom">
+                                <img src="assets\images\dots.png" alt="" height="80">
+                                <img src="assets\images\dots.png" alt="" height="80">
+                            </div>
+
+                            
+                            <!-- <img src="assets\images\dots.png" alt="">
+                            <img src="assets\images\dots.png" alt="">
+                            <img src="assets\images\dots.png" alt=""> -->
+                        </div>
+
+                        
+                        <div class="blue-card py-3 d-flex justify-content-start align-items-flex-end w-100">
+                            <div class="loading-circle col-lg-5 col-md-5 col-6 px-2 d-flex justify-content-end align-items-center">
+                                <div id="value">60%</div>
+                            </div>
+                            <div class="blue-card-text col-lg-4 col-6 col-md-4 d-flex flex-column justify-content-between align-items-flex-start">
+                                <div class="d-flex flex-column justify-content-between align-items-flex-start">
+                                    <h3>Status</h3>
+                                    <p>Growth</p>
+                                </div>
+                               
+                                <h3>4.312</h3>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-0 d-flex justify-content-center">
+                                <i class="fas fa-ellipsis-vertical fa-lg pt-3 ellipsis-icon"></i>
+                            </div>
+                        </div>
+
+                        
+
+                        <!--  -->
+                            <!-- <img src="assets\images\dots.png" alt="">
+                            <img src="assets\images\dots.png" alt="">
+                            <img src="assets\images\dots.png" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fourth-banner-section d-flex flex-row justify-content-center align-items-center">
+        <div class="container">
+            <div class="row fourth-banner-row d-flex justify-content-between align-items-flex-end">
+                <div class="col-lg-6 col-12 d-flex fourth-banner-column justify-content-end " >
+                    <div class="col-lg-8">
+                        <figure>
+                            <img src="assets\images\Free-Demo_Hero.jpg" alt="" class="w-100 team-image" height="500">
+                        </figure>
+                    </div>
+
+                    <div class="col-lg-4 yellow-headshot-section">
+                        <figure>
+                            <img src="assets\images\istockphoto-1171169127-612x612-removebg-preview.png" alt="" class="w-100 yellow-headshot-img">
+                        </figure>
+                        <div class="profiles2 d-flex flex-column justify-content-center align-items-flex-start">
+                            <p>Top rated on trustpilot</p>
+                            
+                                <div class="all-profiles">
+                                    
+                                    <img src="assets\images\istockphoto-1171169127-612x612.jpg" alt="" height="70" class="profile-pic">
+                                    <img src="assets\images\istockphoto-1301953681-170667a.jpg" alt="" height="70" class="profile-pic22">
+                                    <img src="assets\images\janel-lee_photography_cincinnati_ohio_professional_headshots_personal_branding_justin_england-2.jpg" alt=" " height="70" class="profile-pic33">
+                                    <div class="profile-pic44 d-flex justify-content-center align-items-center">
+                                        <i class="fas fa-3"></i>
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                    
+                                </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12 fourth-banner-text d-flex">
+                    <div class="container d-flex flex-column justify-content-flex-end justify-items-flex-end align-items-flex-end">
+                        <h2>Automate repititive tasks where possible.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ullam dolor sit amet consectetur adipisicing elit. </p>
+                        <div class="banner-buttons2">
+                            <button class="orange-button2"> <a href="#">Join Us</a></button>
+                            <button class="white-button"><a href="#">Read the doc</a></button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fifth-banner-section">
+        <div class="container ">
+            <div class="row fifth-banner-row d-flex justify-content-center align-items-center">
+                <div class="col-lg-6 col-12 ">
+                    <div class="container ">
+                        <h2>Smart system & friendly interface</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, alias? Error, dolores quod veniam alias </p>
+                        <button><a href="#">Learn Now</a> </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-12 fifth-banner-graph ">
+                                <!-- <table id="column-example-1" class="charts-css column"><caption> Column Example #1 </caption> <tbody><tr><td style="--size:0.2;"></td></tr> <tr><td style="--size:0.4;"></td></tr> <tr><td style="--size:0.6;"></td></tr> <tr><td style="--size:0.8;"></td></tr> <tr><td style="--size:1;"></td></tr></tbody></table> -->
+                            <div class="graphs d-flex flex-row justify-content-between align-items-end align-content-end">
+                                <div class="first-line col-4"></div>
+                                <div class="second-line col-4"></div>
+                                <div class="third-line col-4"></div>
+                            </div>
+                            </div>
+    
+                            <div class="col-6 fifth-banner-progress-card d-flex justify-content-center align-items-center">
+                                
+                                <div class="col-5  fifth-banner-progress-card-text">
+                                    <h5>Mixing Progress</h5>
+                                    <h4>356</h4>
+                                    <p class="m-0">Lorem</p>
+                                    <p class="m-0">Lorem</p>
+                                </div>
+                                <div class="col-7 fifth-banner-progress-card-bar">
+                                   <p>Graph</p>
+                                    <div class="loading-circle2 col-lg-5 px-2 d-flex justify-content-center align-items-center">
+                                        <div id="value2">71%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                    
+                    <div class="container fifth-banner-cards ">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="fifth-banner-first-card col-lg-7">
+                                <div class="container d-flex justify-content-center align-items-center">
+                                    <div class="col-lg-8 d-grid py-3 justify-content-start align-items-center fifth-banner-first-card-text">
+                                        <div class="d-flex justify-content-start align-items-center pb-2">
+                                           
+                                                <img src="assets\images\thumbs-up.png" alt="" height="30" class="pr-2 ">
+                                            
+                                            <p class="m-0">Followers</p>
+                                        </div>
+                                        <h4>261.22K</h4>
+                                        <h6><span>4.23K</span> vs last 7 days</h6>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img src="assets\images\istockphoto-1301953681-170667a.jpg" alt="" height="70">
+                                    </div>
+                                </div>
+                                
+                            </div>
+    
+                            <div class="fifth-banner-second-card col-lg-5 d-flex justify-content-center align-items-center">
+                                
+                                <div class="fifth-banner-second-card-text">
+                                    <h6>Alex Yaker</h6>
+                                    <p>Lorem</p>
+                                </div>
+    
+                                <div class="fifth-banner-second-card-images">
+                                    <img src="assets\images\checkmark.png" alt="" height="20">
+                                    <img src="assets\images\cross.png" alt="" height="20">
+                                </div>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="sixth-banner-section">
+        <div class="container">
+            <div class="row sixth-banner-row d-flex justify-content-center align-items-center">
+                <div class="col-lg-3 col-md-3 col-0 d-flex flex-lg-column flex-md-column flex-row justify-content-center align-items-center sixth-banner-left-div">
+                    <div class="d-flex justify-content-center align-items-center features flex-wrap">
+                        <img src="assets\images\SeekPng.com_autism-puzzle-piece-png_1700504.png" alt="">
+                        <p class="m-0 sixth-banner-row-left-line ">Unlimited Features</p>
+                        
+                    </div>
+    
+                    <div class="d-flex justify-content-center align-items-center features flex-wrap">
+                        <img src="assets\images\user (1).png" alt="">
+                        <p class="m-0 sixth-banner-row-left-line">Stunning Flexibility</p>
+                        
+                    </div>
+                    
+                </div>
+    
+                
+
+
+    
+                <div class="col-lg-6 col-md-6 col-8 d-flex justify-content-center align-items-center" >
+                    <div class="dotted-line"></div>
+                    <div class="dotted-line2"></div>
+
+                    <img src="assets\images\image-main.jpg" height="600" alt="" class="shock-image">
+                    <div class="dotted-line3"></div>
+                    <div class="dotted-line4"></div>
+                    <div class="dotted-line5"></div>
+                </div>
+    
+                <div class="col-lg-3 col-md-3 col-4 d-flex flex-column justify-content-center align-items-center features-right-div">
+                    <div class="d-flex justify-content-center align-items-center  features flex-wrap">
+                        <img src="assets\images\award.png" alt="">
+                        <p class=" features-last2">Perfect Showcase</p>
+                    </div>
+    
+                    <div class="d-flex justify-content-center align-items-center features flex-wrap">
+                        <img src="assets\images\full-screen.png" alt="">
+                        <p class=" features-last2">High Resolution</p>
+                    </div>
+    
+                    <div class="d-flex justify-content-center align-items-center features flex-wrap">
+                        <img src="assets\images\SeekPng.com_responsive-design-png_2560815.png" alt="">
+                        <p class="m-0 features-last">Responsive Design</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        
+    </section>
+
+    
+
+    
+
+
+
+
+
+
+
+     <!-- Bootstrap Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+
+        let span = document.querySelector("navbar-span");
+
+        span.onhover
+    </script>
+</body>
+
+</html>
